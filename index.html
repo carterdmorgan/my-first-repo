@@ -93,7 +93,9 @@
       context.fillStyle = 'red';
       context.fillRect(apple.x, apple.y, grid - 1, grid - 1);
 
-      context.fillStyle = 'yellow';
+      var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+      context.fillStyle = randomColor;
       snake.cells.forEach(function (cell, index) {
 
         context.fillRect(cell.x, cell.y, grid - 1, grid - 1);
